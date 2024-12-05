@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+     <!-- Top Navbar -->
+     <nav class="navbar">
+        <h1 class="nav-name">_It'sMUE ERIC</h1>
+        <button id="theme-toggle" class="theme-button">🌙 Night Mode</button>
+    </nav>
+
+    <!-- Sidebar -->
+<div class="sidebar">
+    <div class="profile-info">
+        <img src="images/profile.jpg" alt="Your Profile Picture" class="sidebar-profile-img">
+        <h2><I>_MUE ERIC M</I></h2>
+    </div>
+    <nav>
+        <ul>
+            <li><a href="#home"><i class="fas fa-home"></i> Home</a></li>
+            <li><a href="#about"><i class="fas fa-user"></i> About</a></li>
+            <li><a href="#projects"><i class="fas fa-briefcase"></i> Projects</a></li>
+            <li><a href="#skills"><i class="fas fa-cogs"></i> Skills</a></li>
+            <li><a href="#education"><i class="fas fa-graduation-cap"></i> Education</a></li>
+            <li><a href="#contact"><i class="fas fa-envelope"></i> Contact</a></li>
+        </ul>
+        </ul>
+    </nav>
+</div>
+
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <section id="home">
+            <div class="home-container">
+                <!-- Text Content -->
+                <div class="home-text">
+                    <p>Hello, I am</p>
+                    <h1 class="typing" id="name">[MUE ERIC]</h1>
+                    <p id="course"><strong>Software Engineer()</strong></p>
+                    <p id="specialization"> <strong>_CybersecurityEnthusiast</strong></p>
+                </div>
+        
+                <!-- Profile Image -->
+                <div class="home-image">
+                    <img src="images/profile.jpg" alt="Your Profile Picture" class="profile-img">
+                </div>
+            </div>
+        </section>
+        
+
+        <!-- About Section -->
+<section id="about">
+    <div class="about-content">
+        <h2>About Me</h2>
+        <p>
+            I am a dedicated software engineering student with a strong passion for developing innovative web applications and solving complex problems. 
+            With experience in various programming languages like HTML, CSS, JavaScript, Python, and frameworks like Django, 
+            I strive to create efficient, user-friendly solutions. My interests include backend development, web security, and AI integration.
+        </p>
+    </div>
+</section>
+        
+        <section id="projects">
+            <h2>Projects</h2>
+            <p>Check out some of my projects below.</p>
+            <!-- Project details here -->
+        </section>
+
+        <section id="skills">
+            <h2>Skills</h2>
+            <div class="skills-container">
+                <div class="skill">
+                    <img src="images/django.png" alt="Django" title="Django">
+                </div>
+                <div class="skill">
+                    <img src="images/html.png" alt="HTML" title="HTML">
+                </div>
+                <div class="skill">
+                    <img src="images/css.png" alt="CSS" title="CSS">
+                </div>
+                <div class="skill">
+                    <img src="images/javascript.png" alt="JavaScript" title="JAVASCRIPT">
+                </div>
+                <div class="skill">
+                    <img src="images/python.png" alt="Python" title="PYTHON">
+                </div>
+                <div class="skill">
+                    <img src="images/flask.png" alt="flask" title="FLASK">
+                </div>
+                <div class="skill">
+                    <img src="images/dart.png" alt="dart" title="DART">
+                </div>
+                <div class="skill">
+                    <img src="images/design.png" alt="design" title="DESIGN AND ANALYSIS">
+                </div>
+            </div>
+        </section>
+
+        <section id="education">
+            <h2>My Education</h2>
+            <div class="education-container">
+                <div class="education-item">
+                    <img src="images/education1.jpg" alt="Institution 1">
+                    <p class="institution-name">Institution 1</p>
+                    <p class="status">Finished</p>
+                </div>
+                <div class="education-item">
+                    <img src="images/education2.jpg" alt="Institution 2">
+                    <p class="institution-name">Institution 2</p>
+                    <p class="status">Ongoing</p>
+                </div>
+                
+            </div>
+        </section>
+        
+        
+
+        <section id="contact">
+            <div class="contact-container">
+                <!-- Contact Links -->
+                <div class="contact-links">
+                    <h2>Contact Me</h2>
+                    <ul>
+                        <li><a href="https://www.linkedin.com/in/yourprofile" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a></li>
+                        <li><a href="https://github.com/mueeric-blackhat" target="_blank"><i class="fab fa-github"></i> GitHub</a></li>
+                        <li><a href="mailto:your-email@example.com"><i class="fas fa-envelope"></i> Email</a></li>
+                    </ul>
+                </div>
+        
+                <!-- Contact Form -->
+                <div class="contact-form">
+                    <h2>Get In Touch</h2>
+                    <form id="contactForm">
+                        <label for="name">Your Name:</label>
+                        <input type="text" id="name" name="name" required>
+        
+                        <label for="email">Your Email:</label>
+                        <input type="email" id="email" name="email" required>
+        
+                        <label for="message">Your Message:</label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
+        
+                        <button type="submit" class="submit-btn">Send Message</button>
+                    </form>
+                    <div id="confirmationMessage" style="display:none; color: green;">
+                        <p>Thank you! Your message has been sent.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
