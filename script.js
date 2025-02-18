@@ -12,18 +12,23 @@ document.addEventListener("DOMContentLoaded", function () {
     const toggleButton = document.getElementById("theme-toggle");
     const body = document.body;
 
-    // Toggle night mode
-    toggleButton.addEventListener("click", function () {
-        body.classList.toggle("dark-mode");
-        
-        // Update button text and icon
-        if (body.classList.contains("dark-mode")) {
-            toggleButton.textContent = "☀️ Light Mode";
-        } else {
-            toggleButton.textContent = "🌙 Night Mode";
-        }
-    });
+    if (toggleButton) {
+        // Toggle night mode
+        toggleButton.addEventListener("click", function () {
+            body.classList.toggle("dark-mode");
+            
+            // Update button text and icon
+            if (body.classList.contains("dark-mode")) {
+                toggleButton.textContent = "☀️ Light Mode";
+            } else {
+                toggleButton.textContent = "🌙 Night Mode";
+            }
+        });
+    } else {
+        console.error("Theme toggle button not found. Ensure there's an element with ID 'theme-toggle' in your HTML.");
+    }
 });
+
 
 
 
@@ -46,9 +51,31 @@ document.addEventListener("DOMContentLoaded", function () {
     typeEffect();
 });
 
+
+// Show project details
+function showDetails(projectId) {
+    const details = document.getElementById(projectId);
+    if (details) {
+        details.classList.remove('hidden'); // Remove hidden class to display details
+    }
+}
+
+// Hide project details
+function hideDetails(projectId) {
+    const details = document.getElementById(projectId);
+    if (details) {
+        details.classList.add('hidden'); // Add hidden class to hide details
+    }
+}
+
+
+
 // Get the form and the confirmation message elements
 const form = document.getElementById('contactForm');
 const confirmationMessage = document.getElementById('confirmationMessage');
+const nameError = document.getElementById('nameError');
+const emailError = document.getElementById('emailError');
+const messageError = document.getElementById('messageError');
 
 // Event listener for form submission
 form.addEventListener('submit', function(event) {
@@ -59,18 +86,46 @@ form.addEventListener('submit', function(event) {
     const email = document.getElementById('email').value;
     const message = document.getElementById('message').value;
 
-    // Simple validation (this is optional if you want)
-    if (name && email && message) {
-        // Simulate form submission (e.g., send the data to the server)
+    let isValid = true;
+
+    // Reset error messages
+    nameError.textContent = '';
+    emailError.textContent = '';
+    messageError.textContent = '';
+
+    // Simple validation
+    if (!name) {
+        nameError.textContent = 'Please enter your name';
+        isValid = false;
+    }
+    if (!email) {
+        emailError.textContent = 'Please enter your email';
+        isValid = false;
+    } else if (!validateEmail(email)) {
+        emailError.textContent = 'Please enter a valid email';
+        isValid = false;
+    }
+    if (!message) {
+        messageError.textContent = 'Please enter your message';
+        isValid = false;
+    }
+
+    if (isValid) {
+        // Simulate form submission
         console.log('Form submitted', { name, email, message });
 
         // Display confirmation message
         confirmationMessage.style.display = 'block';
 
-        // Reset form fields (optional)
+        // Reset form fields
         form.reset();
-    // } else {
-    //     alert('Please fill out all fields');
-    // }
+    }
 });
+
+// Function to validate email format
+function validateEmail(email) {
+    const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return re.test(email);
+}
+
 

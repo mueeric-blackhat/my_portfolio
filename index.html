@@ -26,7 +26,7 @@
             <li><a href="#about"><i class="fas fa-user"></i> About</a></li>
             <li><a href="#projects"><i class="fas fa-briefcase"></i> Projects</a></li>
             <li><a href="#skills"><i class="fas fa-cogs"></i> Skills</a></li>
-            <li><a href="#education"><i class="fas fa-graduation-cap"></i> Education</a></li>
+            <!-- <li><a href="#education"><i class="fas fa-graduation-cap"></i> Education</a></li> -->
             <li><a href="#contact"><i class="fas fa-envelope"></i> Contact</a></li>
         </ul>
         </ul>
@@ -65,14 +65,44 @@
         </p>
     </div>
 </section>
-        
-        <section id="projects">
-            <h2>Projects</h2>
-            <p>Check out some of my projects below.</p>
-            <!-- Project details here -->
-        </section>
 
-        <section id="skills">
+<section id="projects">
+    <h2>My Projects</h2>
+    <div class="project-container">
+        <!-- Project 1 -->
+        <div class="project-item">
+            <img src="images/python.png" alt="Project 1" class="project-image">
+            <div class="project-info">
+                <h3>Portfolio Website</h3>
+                <button class="read-more-btn" onclick="showDetails('project1')">Read More</button>
+            </div>
+        </div>
+
+        <!-- Project 2 -->
+        <div class="project-item">
+            <img src="images/healthcare.jfif" alt="Project 2" class="project-image">
+            <div class="project-info">
+                <h3>AI HEALTHCARE</h3>
+                <button class="read-more-btn" onclick="showDetails('project2')">Read More</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Project Details -->
+    <div id="project1" class="project-details hidden">
+        <h3>Portfolio Website</h3>
+        <p>Details: A modern portfolio website showcasing personal projects and skills with a responsive design.</p>
+        <button onclick="hideDetails('project1')">Close</button>
+    </div>
+    <div id="project2" class="project-details hidden">
+        <h3>Online Voting System</h3>
+        <p>Details: A Django-based secure and user-friendly platform for online voting.</p>
+        <button onclick="hideDetails('project2')">Close</button>
+    </div>
+</section>
+
+
+                <section id="skills">
             <h2>Skills</h2>
             <div class="skills-container">
                 <div class="skill">
@@ -102,23 +132,23 @@
             </div>
         </section>
 
-        <section id="education">
+        <!-- <section id="education">
             <h2>My Education</h2>
             <div class="education-container">
                 <div class="education-item">
-                    <img src="images/education1.jpg" alt="Institution 1">
-                    <p class="institution-name">Institution 1</p>
+                    <img src="images/flask.png" alt="Institution 1">
+                    <p class="institution-name">Kwa Wanzilu Secondary School</p>
                     <p class="status">Finished</p>
                 </div>
                 <div class="education-item">
-                    <img src="images/education2.jpg" alt="Institution 2">
-                    <p class="institution-name">Institution 2</p>
+                    <img src="images/dart.png" alt="Institution 2">
+                    <p class="institution-name">Kirinyaga University</p>
                     <p class="status">Ongoing</p>
                 </div>
                 
             </div>
         </section>
-        
+         -->
         
 
         <section id="contact">
